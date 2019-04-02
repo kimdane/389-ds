@@ -1,6 +1,6 @@
 FROM centos:centos7
 
-MAINTAINER John Gasper <jgasper@unicon.net>
+MAINTAINER kimdane 
 
 RUN yum install -y epel-release \
     && yum update -y \
