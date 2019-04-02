@@ -1,4 +1,4 @@
-dn: cn=admin,dc=example,dc=edu
+dn: cn=admin,dc=example,dc=com
 objectClass: simpleSecurityObject
 objectClass: organizationalRole
 cn: admin
