@@ -22,7 +22,8 @@ RUN useradd ldapadmin \
     && setup-ds.pl --silent --file /ds-setup.inf \
     && /usr/sbin/ns-slapd -D /etc/dirsrv/slapd-dir \ 
     && sleep 5 \
-    && ldapadd -H ldap:/// -f /users.ldif -x -D "cn=Directory Manager" -w "password"
+    && ldapadd -H ldap:/// -f /users.ldif -x -D "cn=Directory Manager" -w "password" \
+    && mkdir -p /opt/ldif
     
 VOLUME /opt/ldif
 EXPOSE 389 636
