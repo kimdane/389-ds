@@ -28,4 +28,4 @@ RUN useradd ldapadmin \
 VOLUME /opt/ldif
 EXPOSE 389 636
 
-CMD /usr/sbin/ns-slapd -D /etc/dirsrv/slapd-dir && sleep 5 && for f in $(ls ldif); do ldapmodify -H ldap:/// -f /opt/ldif/$f -x -D "cn=Directory Manager" -w "password"; done &&  tail -F /var/log/dirsrv/slapd-dir/access
+CMD /usr/sbin/ns-slapd -D /etc/dirsrv/slapd-dir && sleep 5 && for f in $(ls /opt/ldif); do ldapmodify -H ldap:/// -f /opt/ldif/$f -x -D "cn=Directory Manager" -w "password"; done &&  tail -F /var/log/dirsrv/slapd-dir/access
