@@ -1,0 +1,11 @@
+dn: cn=client1,ou=serviceaccounts,dc=example,dc=com
+changetype: add
+objectClass: simpleSecurityObject
+objectClass: lifionClientServiceConfiguration
+objectClass: account
+cn: client1
+clientid: 123456
+uid: client1user
+userPassword: password
+description: LDAP client user
+

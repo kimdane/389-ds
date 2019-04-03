@@ -4,3 +4,9 @@ objectClass: organizationalRole
 cn: admin
 userPassword: password
 description: LDAP administrator
+
+dn: ou=serviceaccounts,dc=example,dc=com
+objectClass: organizationalUnit
+ou: serviceaccounts
+description: OU for Lifion client service accounts 
+
